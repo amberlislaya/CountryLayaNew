@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Country', {
     id: {
-  type: DataTypes.UUID,
+  type: DataTypes.STRING(3),
   primaryKey: true,
-  defaultValue: DataTypes.UUIDV4,
-  allowNull: true,
+  allowNull: false,
+  unique: true
 },
 name: {
   type: DataTypes.STRING,
-  allowNull: false,
+  allowNull: false
 },
 image: {
  type: DataTypes.STRING,
@@ -31,18 +31,17 @@ subregion: {
   allowNull: false,
 },
 area: {
-  type: DataTypes.UUID,
-  defaultValue: DataTypes.UUIDV4,
+  type: DataTypes.FLOAT,
   allowNull: false,
 },
 population: {
   type: DataTypes.INTEGER,
   allowNull: false,
 },
-created: {
-  type: DataTypes.BOOLEAN,
-  defaultValue:true,
-}
+// created: {
+//   type: DataTypes.BOOLEAN,
+//   defaultValue:true,
+// }
 },
    { frezeeTableName: true, timestamps: false }
 );

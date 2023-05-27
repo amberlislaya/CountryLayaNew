@@ -5,10 +5,10 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("Activity", {
 id: {
-  type: DataTypes.UUID,
+  type: DataTypes.INTEGER,
+  autoIncrement: true,
   primaryKey: true,
-  defaultValue: DataTypes.UUIDV4,
-  allowNull: true,
+  allowNull: false,
 },
 name:{
   type: DataTypes.STRING,
@@ -19,8 +19,13 @@ difficulty: {
   allowNull: false,
 },
 duration: {
-  type: DataTypes.ENUM('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'),
+  type: DataTypes.INTEGER,
   allowNull: false,
+  validate: {
+min: 1,
+max: 24
+}
+
 },
 season:{
   type: DataTypes.ENUM("Summer", "Autumn", "Winter", "Spring"), 
