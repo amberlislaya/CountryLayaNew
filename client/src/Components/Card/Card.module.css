@@ -1,0 +1,16 @@
+.card {
+ background-color: rgb(69, 214, 214);
+ width: 15rem;
+ box-shadow: 2px 2px rgb(40, 40, 37);
+ border-radius: 1px 5px 5px rgb(195, 227, 37);
+ margin: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.details {
+  height: 1px;  
+  background-color: gray;
+}
