@@ -1,0 +1,89 @@
+.container{
+display: flex;
+position: absolute;
+align-items: center;
+border-radius: 30px;
+padding: 1rem 3rem;
+/* margin: 5%; */
+left: 20%;
+top: 25%;
+width: 300px;
+overflow: hidden;
+box-shadow: 0px 10px 15px -5px blue;
+animation: ease-in-out;
+background-color: rgba(255, 252, 252, 0.623);
+}
+
+.name {
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+margin: 3.9%;
+color: rgb(8, 8, 8);
+font-size: xx-large;
+}
+
+.cont {
+ align-items: center;
+justify-content: center;
+display: flex;
+font-size: large;
+color: blue;
+margin: 1%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sub{
+align-items: center;
+justify-content: center;
+display: flex;
+margin: 1%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.area{
+align-items: center;
+justify-content: center;
+display: flex;
+margin: 1%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.popu{
+
+align-items: center;
+justify-content: center;
+display: flex;
+margin: 1%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans;
+}
+
+.img{
+position: relative;
+justify-content: center;
+display: flex;
+overflow: hidden;
+height: 140px;
+margin: 25px;
+border-radius: 1000px 1000px 100px 1000px;
+border: 3px solid rgb(201, 218, 243);
+box-shadow: -5px -3px 5px 6px rgb(7, 7, 7);
+}
+
+.buttVolver{
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+margin-bottom: 0.5rem;
+display: block;
+padding: 0.3rem;
+border-radius: 5px;
+border: 0;
+outline: solid 3px #4285f4;
+font-size: small;
+box-shadow: 10px 2px 10px #1a06cc;
+
+
+}

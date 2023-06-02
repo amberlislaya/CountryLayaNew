@@ -1,25 +1,112 @@
 .container{
-display: flex;    
-background-color: rgb(250, 250, 250);
+display: flex;
+align-items: center;  
+text-align: center;
+justify-content: center;
+/* justify-content: space-between; */
+/* padding-left: 20%; */
+padding: 0.5rem 1.5rem;
+padding-right: 5%;
 height: 3.5rem;
-margin: 15px;
-padding: 10px;
+margin: 20px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-border-radius: 5px;
+border-radius: 32px 70px 30px;
 box-shadow: 1px 10px 10px rgb(65, 185, 201);
-border: solid 2px rgb(39, 211, 165);
+/* border: solid 2px rgb(39, 211, 165); */
+
 
 
 }
 
 .link {
+display: inline-flex;
+text-align: center;
+justify-content: center;
+padding: 5px 15px;
+color: rgb(241, 241, 241);
+transition: .3s;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+/* .link2 {
+display: inline-block;
+list-style-type: none;
+padding: 10px 100px;
+color: rgb(241, 241, 241);
+transition: .3s;
+}
+
+.link3 {
+display: inline-block;
+list-style-type: none;
+padding: px 100px;
+color: rgb(241, 241, 241);
+transition: .3s;
+}
+
+.link4 {
+    color: rgb(241, 241, 241);
+    transition: .3s;
+    padding: px 100px;
+} */
+
+.link:hover{
+    color: rgb(47, 129, 145);
+
+}
+
+/* .link2:hover {
+    color: rgb(47, 129, 145);
+
+}
+
+.link3:hover {
+    color: rgb(47, 129, 145);
+
+}
+
+.link4:hover {
+    color: rgb(47, 129, 145);
+
+} */
+
+
+.landinLink{
 display: flex;
-justify-content: space-between;
-width: 9rem;
-margin-top: 1rem;
-margin-left: 30rem;
-text-decoration-color: aqua;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20%;  
+text-decoration: none;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: rgb(11, 165, 185);
+animation: shaking 2s infinite;
+font-size: xx-large;
+/* padding: 11px; */
+}
     
+    @keyframes shaking {
+        10% {
+            transform: scale(1.05) rotate(5deg);
+        }
+    
+        20% {
+            transform: scale(1.05) rotate(-5deg);
+        }
+    
+        30% {
+            transform: scale(1.05) rotate(5deg);
+        }
+    
+        40% {
+            transform: none;
+        }
+    }
+    
+.span{
+    color: rgb(196, 9, 112);
 }
 
 

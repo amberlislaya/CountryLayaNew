@@ -1,0 +1,95 @@
+.cont{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.h2 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 4%;
+    padding: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    font-size: xx-large;
+    
+}
+
+.label {
+align-items: center;
+justify-content: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: aliceblue;
+font-size: large;
+display: flex;
+margin: 3%;
+}
+
+
+.inputact {
+display: flex;
+justify-content: center;
+align-items: center;
+ margin-bottom: 1rem;
+display: block;
+padding: 0.5rem 6.4rem;
+border-radius: 5px;
+border: 0;
+outline: solid 3px #4285f4;
+margin: 3%;
+}
+
+.inputa {
+display: flex;
+justify-content: center;
+align-items: center;
+ margin-bottom: 1rem;
+display: block;
+padding: 0.5rem 7.4rem;
+border-radius: 5px;
+border: 0;
+outline: solid 3px #4285f4;
+margin: 3%;
+/* padding: 3%; */
+}
+
+.season {
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+margin-bottom: 0.5rem;
+padding: 0.5rem;
+font-size: medium;
+color: #4285f4;
+margin: 6%;
+}
+
+.cuadro {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-size: medium;
+    color: #4285f4;
+}
+
+.button {
+display: flex;
+justify-content: center;
+align-items: center;
+display: block;
+margin-bottom: 1rem;
+display: block;
+padding: 0.5rem;
+border-radius: 5px;
+border: 0;
+outline: solid 3px #4285f4;
+margin: 3%;
+}
+
+.error{
+    color: red;
+}

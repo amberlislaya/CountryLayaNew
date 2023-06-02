@@ -1,6 +1,32 @@
-.home {
+ .home { 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: azure;
+    font-size: larger;
+} 
+
+.inputs {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: 2%;
+    padding: 1%;
+    margin-bottom: 3rem;
+    border-radius: 100px;
+    font-size: large;
+    outline: solid 0.5px #4285f4;
+    box-shadow: 7px 7px 5px #e3e5e7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(8, 8, 236);
+        
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #4285f4;
 }

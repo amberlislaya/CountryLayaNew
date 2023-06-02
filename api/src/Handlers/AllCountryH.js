@@ -4,18 +4,23 @@ const {Country, Activity} = require("../db")
 
 
 
-const getCountriesH = async (req, res) => {
+const getCountiesName = async (req, res) => {
  const {name} = req.query;
-
  try {
   if(!name){
     const allCountryC = await Country.findAll({
-      include: Activity,
+      include: {
+        model: Activity,
+        attributes: ["name", "difficulty", "duration", "season"],
+        through: {
+          attributes: [],
+        },
+      },
     });
     return res.status(200).json(allCountryC);
   }else{
     const country = await Country.findAll({
-      where: {name: {[Op.iLike]: `%{name}%`}},
+      where: {name: {[Op.iLike]: `%${name.toLowerCase()}%`}},
     });
     if(!country)
     return res.status(404).json({error: "No se encontro el pais"});
@@ -26,32 +31,13 @@ const getCountriesH = async (req, res) => {
  }
 }
 
-module.exports = getCountriesH;
+module.exports = getCountiesName;
 
 
 
 
 
 
-
-// const getCountiesName = async (req, res) => {
-
-// const {name} = req.query;
-
-// try {
-//   if (name) {
-//     const nameCountry = await nameCountryC(name);
-//     res.status(200).json(nameCountry);
-//   } else {
-//     const response = await allCountryC();
-//     res.status(200).json(response);
-//   }
-// } catch (error) {
-//   res.status(400).json({error: error.message})
-// }
-// }
-
-// module.exports = getCountiesName;
 
 
 

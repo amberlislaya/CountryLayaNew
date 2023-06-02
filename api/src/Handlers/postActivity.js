@@ -1,26 +1,25 @@
 const { json } = require("sequelize");
 const { Country, Activity } = require("../db");
 const { Op } = require("sequelize");
+const {postActivity} = require("../Controllers/getActivity") 
+
 
 const postActivityH = async (req, res) => {
-    const {id, name, difficulty, duration, season, countries} = req.body;
-try {
-    const activity = await Activity.create({
-        id,
-        name,
-        difficulty,
-        duration,
-        season,
-    });
-    const activityToAdd = await Country.findAll({
-        where: {name: countries},
-    });
-    await activity.addCountry(activityToAdd);
-    
-    res.status(200).send("Busqueda Ejecutada")
-} catch (error) {
-    res.status(400).json({error: error.message});
-}
+  const { name, difficulty, duration, season, countries } = req.body;
+  console.log("hola");
+  try {
+    const newActivity = await postActivity(
+      name,
+      difficulty,
+      duration,
+      season,
+      countries
+    );
+    res.status(200).json(newActivity);
+  } catch (error) {
+    console.log("error4");
+    res.status(400).json({ error: error.message });
+  }
 };
 
 module.exports = postActivityH;

@@ -1,6 +1,10 @@
 .cards {
+    padding: 8rem;
+    margin-top: -8%;
     display: flex;
-    text-align: center;
-    padding: 50px;
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 50px;
+    /* display: inline-block; */
+
 }

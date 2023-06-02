@@ -1,10 +1,46 @@
-.button {
+.landing {
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
-    
+    margin: 0;
+    padding: 300px;
 }
 
+.button {
+    margin: 0 15px;
+    font-size: 50px;
+    text-decoration: none;
+    height:50px;
+    width: 120px;
+    border-radius: 1000px 1000px 100px 1000px;
+    box-shadow: 5px 10px 10px 5px rgb(242, 244, 245);
+    padding: 70px;
+    background: linear-gradient(90deg, hsl(0, 0%, 4%), #3393b0);
+    color: rgb(208, 206, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+    animation: shaking 2s infinite;
+}
+
+@keyframes shaking{
+    10%{
+        transform: scale(1.05) rotate(5deg);
+    }
+    20%{
+        transform: scale(1.05) rotate(-5deg);
+    }
+    30% {
+        transform: scale(1.05) rotate(5deg);
+    }
+    40%{
+        transform: none;
+    }
+}
 
 

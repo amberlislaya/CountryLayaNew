@@ -1,24 +1,41 @@
 import React from 'react'
 import style from "./Card.module.css"
+import {Link} from "react-router-dom"
 
-const Card = (props) => {
+const Card = ({id, name, img, continent }) => {
   return (
-  <div className={style.card}>
+    <div>
+<Link to={`/details/${id}`}>
 
-  <div className={style.title}>
-    <h3>{props.id}</h3>
+<div className={style.cardName}> 
+<div>
+<h1 className={style.h4}>{name}</h1>
 </div>
 
-  <div>
-    <h4>{props.name}</h4>  
+<div>
+<h3 className={style.h5}>{continent}</h3>
 </div>
 
-<div>{props.continent}
+<div>
+<h5 className={style.h6}>{id}</h5>
 </div>
 
-<div>{props.capital}</div>
+<div>
+<div className={style.img}>
+<img src={img}/>
 </div>
+
+<div className={style.btn}>
+  </div>
+</div>
+</div>
+</Link>
+</div>
+
+  
+    
+
 )
 }
 
-export default Card
+export default Card;

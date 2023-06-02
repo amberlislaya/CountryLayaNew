@@ -2,19 +2,21 @@ import React from 'react'
 import Card from "../Card/Card"
 import style from "./Cards.module.css"
 
-const Cards = () => {
+
+
+const Cards = ({countryAll, firstIndex, lastIndex}) => {
   return (
-    <div className={style.cards}>
 
-     <Card id={'ATF'} name={'gambia'} continent={'aficano'} />
-     <Card id={'ATF'} name={'gambia'} continent={'aficano'}/>
-     <Card id={'ATF'} name={'gambia'} continent={'aficano'}/>
-     <Card id={'ATF'} name={'gambia'} continent={'aficano'}/>
-     
-     
-
-    </div>
-  )
+<div className={style.cards}>
+   {countryAll?.map((pai,index)=>{
+            return <Card key={index}
+            id={pai.id}
+            name={pai.name}
+            img={pai.image}
+            continent={pai.continent}/>
+         }).slice(firstIndex, lastIndex)}
+</div>
+)
 }
 
 export default Cards

@@ -38,10 +38,6 @@ population: {
   type: DataTypes.INTEGER,
   allowNull: false,
 },
-// created: {
-//   type: DataTypes.BOOLEAN,
-//   defaultValue:true,
-// }
 },
    { frezeeTableName: true, timestamps: false }
 );

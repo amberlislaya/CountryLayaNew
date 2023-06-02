@@ -5,16 +5,13 @@ import style from "./NavBar.module.css"
 const NavBar = () => {
   return (
 <div className={style.container}>
-<Link to="/" className="fs-3">Country<span>Amberlis</span></Link>
-<div>
-
-<div className={style.link}>    
-     <Link to="/home" className="">Home</Link> 
-     <Link to="/create" className="">Create</Link>    
-</div>
-</div>
-
-  
+<h5><Link to="/" className={style.landinLink}>COUNTRY<span>.LAYA</span></Link></h5>
+   <div className={style.link}>
+     <Link to="/home" className={style.link}>Home</Link> 
+     <Link to="/details" className={style.link}>Details</Link> 
+     <Link to="/discover" className={style.link}>Discover</Link>
+     <Link to="/contact" className={style.link}>Contact</Link>
+    </div>   
 </div>
 
 

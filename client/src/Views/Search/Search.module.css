@@ -1,0 +1,11 @@
+.containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butt {
+    padding: 1rem 2rem;
+    
+}
+

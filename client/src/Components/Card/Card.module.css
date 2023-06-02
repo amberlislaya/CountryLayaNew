@@ -1,16 +1,98 @@
-.card {
- background-color: rgb(69, 214, 214);
- width: 15rem;
- box-shadow: 2px 2px rgb(40, 40, 37);
- border-radius: 1px 5px 5px rgb(195, 227, 37);
- margin: 10px;
+.container {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  
 }
 
-.title {
-    text-align: center;
+.cardName:hover {
+transform: scaleX(1.1);
+box-shadow: 0px 0px 15px -5px;
 }
 
-.details {
-  height: 1px;  
-  background-color: gray;
+.cardName {
+  border-radius: 30px;
+  padding: 0.1%;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -5px blue;
+  transition: 0.5s;
+  animation: ease-in-out;
+  margin-top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.img{
+  position: relative;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  height: 140px;
+  margin: 50px;
+  border-radius: 1000px 1000px 100px 1000px;
+  border: 3px solid rgb(201, 218, 243);
+  box-shadow: -5px -3px 5px 6px rgb(201, 218, 243);
+  
+}
+
+.h4 {
+margin: 5%;
+color: beige;
+align-items: center;
+justify-content: space-between;
+text-align: center;
+font-size: large;
+font-family: Arial, Helvetica, sans-serif;
+
+ 
+}
+
+.h5 {
+  margin: 2%;
+  color: beige;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.h6{
+margin: 2%;
+color: beige;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: x-small;
+font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* .btn {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background: rgba(37, 144, 226, 0.1);
+  transform: scale(1.2s);
+  
+} */
+
+/* .button {
+  padding: 0.5rem;
+  background-color: aqua;
+  border: none;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+} */
+
+a{
+  text-transform: uppercase;
+  color: rgb(1, 87, 99);
+  text-decoration: none;
+  font-weight: bold;
 }
