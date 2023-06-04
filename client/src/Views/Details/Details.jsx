@@ -32,17 +32,19 @@ if(detalle !== undefined){
 }
 
   return (
-    <div className={style.container}>
-<div>
+    
+<div className={style.container}>
+<div className={style.box}>
   <p className={style.name}>{obj.name}</p>
   <img className={style.img} src={obj.image} alt="" />
-  <p className={style.cont}>continent: {obj.continent}</p>
-  <p className={style.sub}>subregion: {obj.subregion}</p>
-  <p className={style.area}>area: {obj.area}</p>
-  <p className={style.popu}>population: {obj.population}</p>
-  <div>
-  <Link to="/home"><button className={style.buttVolver}>Volver</button></Link>
+  <p className={style.cont}>Continent: {obj.continent}</p>
+  <p className={style.sub}>Subregion: {obj.subregion}</p>
+  <p className={style.area}>Area: {obj.area}</p>
+  <p className={style.popu}>Population: {obj.population}</p>
+<div>
+  <Link className={style.butt} to="/home"><button className={style.buttVolver}>Volver</button></Link>
 </div>
+
 </div>
 </div>
 

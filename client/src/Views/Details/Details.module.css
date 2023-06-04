@@ -1,89 +1,102 @@
-.container{
+.container {
 display: flex;
-position: absolute;
+justify-content: center;
+flex-direction: column;
 align-items: center;
+
+}
+
+.box {
 border-radius: 30px;
-padding: 1rem 3rem;
-/* margin: 5%; */
-left: 20%;
-top: 25%;
-width: 300px;
+padding: 20px;
+margin: 20%;
+width: 290px;
 overflow: hidden;
-box-shadow: 0px 10px 15px -5px blue;
+box-shadow: 0px 10px 50px -5px rgb(251, 251, 253);
+transition: 0.5s;
 animation: ease-in-out;
-background-color: rgba(255, 252, 252, 0.623);
+margin-top: 12rem;
+background-color: rgba(14, 13, 13, 0.233);
+
 }
 
 .name {
 align-items: center;
 justify-content: center;
-text-align: center;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-margin: 3.9%;
-color: rgb(8, 8, 8);
+display: flex;
+margin: 6%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: xx-large;
+color: aliceblue;
+}
+
+.img{
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 150px;
+/* margin: 50px; */
+padding: 0.5rem 2rem;
+border-radius: 1000px 1000px 100px 1000px;
+border: 3px solid rgb(7, 7, 7);
+box-shadow: -5px -3px 5px 6px rgb(12, 12, 12);
 }
 
 .cont {
- align-items: center;
+align-items: center;
 justify-content: center;
 display: flex;
-font-size: large;
-color: blue;
-margin: 1%;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+margin: 2%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: x-large;
+color: aliceblue;
 }
 
 .sub{
 align-items: center;
 justify-content: center;
-display: flex;
-margin: 1%;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+display: flex; 
+margin: 2%;
+font-size: large;
+color: aliceblue;
 }
 
 .area{
 align-items: center;
 justify-content: center;
-display: flex;
-margin: 1%;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+display: flex; 
+margin: 2%;
+font-size: large;
+color: aliceblue;
 }
 
-.popu{
-
+.popu {
 align-items: center;
 justify-content: center;
-display: flex;
-margin: 1%;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans;
-}
-
-.img{
-position: relative;
-justify-content: center;
-display: flex;
-overflow: hidden;
-height: 140px;
-margin: 25px;
-border-radius: 1000px 1000px 100px 1000px;
-border: 3px solid rgb(201, 218, 243);
-box-shadow: -5px -3px 5px 6px rgb(7, 7, 7);
+display: flex;    
+margin: 2%;
+font-size: medium;
+color: aliceblue;
 }
 
 .buttVolver{
-display: flex;
-justify-content: center;
 align-items: center;
-overflow: hidden;
-margin-bottom: 0.5rem;
-display: block;
-padding: 0.3rem;
+justify-content: center;
+display: flex;
+margin-bottom: 1rem;
+margin: 1%;
+padding: 0.2rem;
 border-radius: 5px;
-border: 0;
 outline: solid 3px #4285f4;
-font-size: small;
-box-shadow: 10px 2px 10px #1a06cc;
+border: 0;
+color: rgb(8, 8, 8);
+font-size: medium;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-
+.butt {
+align-items: center;
+justify-content: center;
+display: flex;  
+  
 }

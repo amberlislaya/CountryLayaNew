@@ -4,8 +4,9 @@ export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_SEARCH = "GET_SEARCH";
 export const CREATE_ACTIVITIES = "CREATE_ACTIVITIES";
 export const GET_COUNTRYID = "GET_COUNTRYID";
-
-
+export const FILTER = "FILTER";
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
+export const FILTER_ACTIVITY = "FILTER_ACTIVITY";
 
 
 export const getCountriesAll = () => {
@@ -42,4 +43,23 @@ export const getCountryforID = (id) => {
         const response = await axios.get(`http://localhost:3001/countries/${id}`);
         dispatch({type: GET_COUNTRYID, payload: response})
     }
+}
+
+export const filter = (fil) => {
+  return function(dispatch) {
+    return dispatch({type:FILTER, payload:fil})
+  }
+}
+
+export const getActivity = () => {
+  return async function(dispatch){
+    const activities = (await axios.get(`http://localhost:3001/activities`)).data;
+    dispatch({type: GET_ACTIVITIES,payload: activities})
+  }
+}
+
+export const filtActivity =(act)=>{
+  return function(dispatch){
+    return dispatch({type:FILTER_ACTIVITY, payload:act})
+  }
 }
