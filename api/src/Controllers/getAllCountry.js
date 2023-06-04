@@ -35,6 +35,8 @@ const DataCountries = await Country.findAll({
     attributes: []
   }}  
 });
+
+
 res.status(200).json(DataCountries);
 }
 };

@@ -17,7 +17,23 @@ const getCountiesName = async (req, res) => {
         },
       },
     });
-    return res.status(200).json(allCountryC);
+
+const mapInfo = allCountryC.map((element) => {
+  return {
+    id: element.id,
+    name: element.name,
+    image: element.image,
+    continent:element.continent,
+    capital: element.capital,
+    subregion: element.subregion,
+    area: element.area,
+    population: element.population,
+    Activities: element.Activities.map((e) => e.name),
+  };
+});
+
+
+    return res.status(200).json(mapInfo);
   }else{
     const country = await Country.findAll({
       where: {name: {[Op.iLike]: `%${name.toLowerCase()}%`}},

@@ -1,4 +1,4 @@
-const { Activity } = require("../db");
+const { Activity, Country} = require("../db");
 
 
 const postActivitiesC = async(name, difficulty, duration, season, countries) =>{
@@ -15,8 +15,25 @@ return activities.dataValues;
 }
 
 const ActivitiesgetC = async() => {
-const activity = await Activity.findAll();
-return activity;
+const activity = await Activity.findAll({
+    attributes: ['name'],
+    include: {
+    model: Country,
+    attributes: ['id'],
+    through: {
+    attributes: [],
+    }
+
+    }
+});
+
+const mapInfo = activity.map(elemt=>{
+    return {
+        name: elemt.name,
+        Countries: elemt.Countries.map(e=>e.id)
+    }
+}) 
+return mapInfo;
 
 }
 
