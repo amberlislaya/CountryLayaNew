@@ -7,8 +7,8 @@ const getCountriesByIdH = require("../Handlers/ByIdCountryH");
 
 const router = Router();
 
-router.get("/", getCountriesH); //CALL ALL COUNTRIES, FOR NAME
-router.get("/countries/name", getCountiesName);
+router.get("/", getCountriesH); //CALL ALL COUNTRIES
+router.get("/countries/name", getCountiesName); //ALL COUNTRIES FOR NAME
 router.get("/:id", getCountriesByIdH); //CALL ALL FOR ID
 
 
