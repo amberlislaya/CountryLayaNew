@@ -3,7 +3,7 @@ import style from "./Home.module.css"
 import Cards from '../../Components/Cards/Cards'
 import { useSelector, useDispatch } from 'react-redux'
 import {getCountriesAll, searchCountry, filter, getActivity, filtActivity} from '../../Redux/action'
-import Pagination from '../../Components/Pagination/Pagination'
+import Pagination from "../../Components/Pagination/Pagination"
 
 
 
@@ -117,24 +117,24 @@ dispatch(filter(event.target.value))
 }
 
 
-  return (
+         return (
 <div>
 <div className={style.container}>
-  <select name="Activities" onChange={handlerActivities}>
-    <option value="Selection">Selection</option>
+  <select className={style.containerAct} name="Activities" onChange={handlerActivities}>
+    <option className={style.containerSelect} value="Selection">Actividades</option>
     {activities?.map((element,index)=>{
       return <option key={index} value={element.name}>{element.name}</option>
     })}
   </select>
 
-  <button name="inc" onClick={handlerChangeInc}>Popu +</button>
-  <button name="asc" onClick={handlerChangeAsc}>Asc</button>
+  <button className={style.ascdesc} name="inc" onClick={handlerChangeInc}>Popu +</button>
+  <button className={style.ascdesc} name="asc" onClick={handlerChangeAsc}>Asc</button>
 <input className={style.inputs} type="text" placeholder='Search' onChange={handlerSearchName}/>
-<button name="desc" onClick={hadlerChangeDesc}>Desc</button>
-<button name="decr" onClick={handlerChangeDecr}>Popu -</button>
+<button className={style.ascdesc} name="desc" onClick={hadlerChangeDesc}>Desc</button>
+<button className={style.ascdesc} name="decr" onClick={handlerChangeDecr}>Popu -</button>
 
-<select name='Continet' onChange={onChangeCombo} >
-  <option value="0">Selection</option>
+<select className={style.select} name='Continet' onChange={onChangeCombo} >
+  <option value="0">Continents</option>
   <option value="Africa">Africa</option>
   <option value="Asia">Asia</option>
   <option value="South America">South America</option>

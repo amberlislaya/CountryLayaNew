@@ -2,10 +2,9 @@ import { Route, BrowserRouter, Switch, useLocation } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar.jsx"
 import Home from "./Views/Home/Home.jsx"
 import Landing from "./Views/Landing/Landing.jsx"
-import Contact from "./Views/Form/Contact.jsx"
+import Contact from "./Views/Contact/Contact.jsx"
 import Details from "./Views/Details/Details.jsx"
 import Discover from "./Views/Create/Discover.jsx"
-// import Search from "./Views/Search/Search.jsx"
 import "./App.css";
 
 function App() {

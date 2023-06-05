@@ -10,6 +10,7 @@ const [maxPageNumberLimited, setMaxPageNumberLimited] = useState(5)
 const [minPageNumberLimited, setMinPageNumberLimited] = useState(0)
 
 
+
 let pageNumber = [];
 for(let i = 1; i <= Math.ceil(totalCountries/CountryPage); i++){
   pageNumber.push(i);
@@ -20,14 +21,14 @@ setCurrentPage(Number(event.target.id))
 }
 
 const renderPageItems = pageNumber.map((number)=>{
-  // if(number < maxPageNumberLimited + 1 && number > minPageNumberLimited){
+  if(number < maxPageNumberLimited + 1 && number > minPageNumberLimited){
 
  return (
- <li key={number} id={number} onClick={handlerClick} className={CurrentPage == number ? style.active:null}>{number}</li>
+    <li key={number} id={number} onClick={handlerClick} className={CurrentPage == number ? style.active:null}>{number}</li>
   )
-  // }else{
-  //   return null;
-  // }
+  }else{
+    return null;
+  }
  
 })
 
@@ -42,6 +43,7 @@ const onNextPage = () =>{
   }
 }
 }
+
  const onPrevPage = () => {
   if(CurrentPage > 1){
   setCurrentPage(CurrentPage -1)
@@ -49,9 +51,12 @@ const onNextPage = () =>{
     setMaxPageNumberLimited(maxPageNumberLimited - pageNumberLimited)
     setMinPageNumberLimited(minPageNumberLimited - pageNumberLimited)
   }
+
 }
 };
-  return ( 
+
+  return (
+    
 <div className={style.container}>
       
    <button className={style.prev} onClick={() => onPrevPage()}>Prev</button>

@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./Contact.module.css"
 import {useForm} from "react-hook-form";
-import {ageValidator} from "../Form/ageValidators"
+import {ageValidator} from "../Contact/ageValidators"
 
 const Create = () => {
 
