@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import style from "./Pagination.module.css"
-// import { Link } from 'react-router-dom';
+
 
 const Pagination = ({CountryPage, CurrentPage, setCurrentPage, totalCountries}) => {
 

@@ -65,8 +65,6 @@ const handleCountries = (event) => {
 const property = event.target.name;
 const value = event.target.value;
 
-  
-
   setActivity({
     ...activity,
     [property]: value
@@ -97,8 +95,6 @@ dispatch(createActivity(activity))
     duration:"1",
     difficulty:"1",
     
-    
-
   })
 document.getElementById("name").value=""
  }
