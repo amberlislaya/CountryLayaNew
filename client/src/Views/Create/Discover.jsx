@@ -86,11 +86,22 @@ setActivity({
 
  const handleSubmit = (event) => {
   event.preventDefault();
-  // console.log(activity)
 dispatch(createActivity(activity))
   
+ }
 
- };
+ const hanlderCl = (event) => {
+  event.preventDefault()
+  setActivity({
+    ...activity,
+    duration:"1",
+    difficulty:"1",
+    
+    
+
+  })
+document.getElementById("name").value=""
+ }
 
   return (
 <div className={style.cont}>
@@ -101,7 +112,7 @@ dispatch(createActivity(activity))
 <h2 className={style.h2}>Discover</h2>
 
 <label className={style.label}>Actividad</label>
-<input className={style.inputact} type='text' name="name" onChange={handleCountries}/>
+<input className={style.inputact} type='text' name="name" id="name" onChange={handleCountries}/>
 <br/>
 <span className={style.error}>{errors.name}</span>
 
@@ -127,21 +138,9 @@ dispatch(createActivity(activity))
     <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
     <option key={country.id} value={country.id}>{country.name}</option>)}
 </select>
-
-<label className={style.label}>Country/Countries</label>
-<select className={style.cuadro} name="countryID"  onChange={handleCombo} >
-    <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
-    <option key={country.id} value={country.id}>{country.name}</option>)}
-</select>
-
-<label className={style.label}>Country/Countries</label>
-<select className={style.cuadro} name="countryID"  onChange={handleCombo} >
-    <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
-    <option key={country.id} value={country.id}>{country.name}</option>)}
-</select>
-
                  
 <button className={style.button} type="submit">Submit</button>
+<button className={style.clear} onClick={hanlderCl}>Clear All</button>
 </div>
 </form>       
 </div>)

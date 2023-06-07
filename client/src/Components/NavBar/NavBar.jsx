@@ -5,7 +5,7 @@ import style from "./NavBar.module.css"
 const NavBar = () => {
   return (
 <div className={style.container}>
-<h5><Link to="/" className={style.landinLink}>COUNTRY<span>.LAYA</span></Link></h5>
+<h5><Link to="/" className={style.landinLink}>COUNTRY<span>.94</span></Link></h5>
    <div className={style.link}>
      <Link to="/home" className={style.link}>Home</Link> 
      <Link to="/details" className={style.link}>Details</Link> 

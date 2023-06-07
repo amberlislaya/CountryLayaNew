@@ -72,24 +72,6 @@ font-family: Arial, Helvetica, sans-serif;
   
 }
 
-/* .btn {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  background: rgba(37, 144, 226, 0.1);
-  transform: scale(1.2s);
-  
-} */
-
-/* .button {
-  padding: 0.5rem;
-  background-color: aqua;
-  border: none;
-  transition: 0.2s;
-  margin-bottom: 0.5rem;
-  border-radius: 3px;
-} */
-
 a{
   text-transform: uppercase;
   color: rgb(1, 87, 99);
