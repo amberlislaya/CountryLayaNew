@@ -14,6 +14,12 @@ name:{
   type: DataTypes.STRING,
   allowNull: false,
   unique:true,
+  validate: {
+    isAlpha:{
+      args:true,
+      msg: "cannot containt numbers"
+    }
+  }
 },
 difficulty: {
   type: DataTypes.INTEGER,

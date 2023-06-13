@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');
 const infoApi = require('./src/Controllers/postActivityC')
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   server.listen(3001, async () => {
     await infoApi();
     console.log('%s listening at 3001'); // eslint-disable-line no-console

@@ -14,6 +14,7 @@ await countries.data.map((country)=> {
         subregion: country.subregion ? country.subregion : "no existe",
         area: country.area,
         population: country.population,
+
     };
     Country.findOrCreate({where: pais})
 })
