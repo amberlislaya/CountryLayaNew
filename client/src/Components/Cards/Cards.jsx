@@ -13,7 +13,8 @@ const Cards = ({countryAll, firstIndex, lastIndex}) => {
             id={pai.id}
             name={pai.name}
             img={pai.image}
-            continent={pai.continent}/>
+            continent={pai.continent}
+            activity={pai.activity}/>
          }).slice(firstIndex, lastIndex)}
 </div>
 )

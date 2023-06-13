@@ -5,28 +5,27 @@ import style from './Search.module.css'
 import {Link} from 'react-router-dom'
 
 const Search = () => {
-  const dispatch = useDispatch()
-  const [name, setName] = useState();
+//   const dispatch = useDispatch()
+//   const [name, setName] = useState();
 
-  const handlechange = (event) => {
-    event.preventDefault()
-    setCurrentPage
-    setName(event.target.value)
-  }
+//   const handlechange = (event) => {
+//     event.preventDefault()
+//     setName(event.target.value)
+//   }
 
-  return (
+//   return (
     
-<div>
-  <input className={style.inp} type="search" onChange= {handlechange} />
-    <select className={style.containers}>
+// <div>
+//   <input className={style.inp} type="search" onChange= {handlechange} />
+//     <select className={style.containers}>
    
-<Link> 
-  <button className={style.butt} type='submit' onClick={()=> dispatch(searchCountry(name))}>Search Contry</button>
-</Link>
+// <Link> 
+//   <button className={style.butt} type='submit' onClick={()=> dispatch(searchCountry(name))}>Search Contry</button>
+// </Link>
 
-</select>
-</div>
-);
+// </select>
+// </div>
+// );
 }
 
 export default Search;

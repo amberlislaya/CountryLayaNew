@@ -84,7 +84,19 @@ setActivity({
 
  const handleSubmit = (event) => {
   event.preventDefault();
+  // if(activity.name && activity.duration && activity.difficulty && activity.season && activity.country){
 dispatch(createActivity(activity))
+  setErrors({
+    ...errors, name:"",
+    })
+  // }else{
+  //   alert("fill in all the data")
+  //   setErrors({
+  //   ...errors, name:"",
+  //   })
+  // }
+
+
   
  }
 
@@ -110,18 +122,18 @@ document.getElementById("name").value=""
 <label className={style.label}>Actividad</label>
 <input className={style.inputact} type='text' name="name" id="name" onChange={handleCountries}/>
 <br/>
-<span className={style.error}>{errors.name}</span>
+<span className={style.error} id='sp'>{errors.name}</span>
 
 <label className={style.label}>Difficulty : {activity.difficulty}</label>
-<input className={style.inputa} name='difficulty' type='range' onChange={handleRange} min='1' max='5' value={activity.difficulty}/>
+<input className={style.inputa} id="dif" name='difficulty' type='range' onChange={handleRange} min='1' max='5' value={activity.difficulty}/>
 
 <label className={style.label}>Duration : {activity.duration}</label>
-<input  className={style.inputa} name="duration" type='range' onChange={handleRange} step="1" min="1" max="24" value={activity.duration} />
+<input  className={style.inputa} id="durt" name="duration" type='range' onChange={handleRange} step="1" min="1" max="24" value={activity.duration} />
 <br/>
 <span className={style.error}>{errors.duration}</span>
 
 <label className={style.season}>Season</label>
-<select className={style.cuadro} name="season" onChange={handleCountries}>
+<select className={style.cuadro} id="sea" name="season" onChange={handleCountries}>
     <option value='select'>Select Season</option>
     <option value='Verano'>Summer</option>
     <option value='Otoño'>Autumn</option>
@@ -130,7 +142,19 @@ document.getElementById("name").value=""
 </select>
 
 <label className={style.label}>Country/Countries</label>
-<select className={style.cuadro} name="countryID"  onChange={handleCombo} >
+<select className={style.cuadro} id="country1" name="countryID"  onChange={handleCombo} >
+    <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
+    <option key={country.id} value={country.id}>{country.name}</option>)}
+</select>
+
+<label className={style.label}>Country/Countries</label>
+<select className={style.cuadro} id="country2" name="countryID"  onChange={handleCombo} >
+    <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
+    <option key={country.id} value={country.id}>{country.name}</option>)}
+</select> 
+
+<label className={style.label}>Country/Countries</label>
+<select className={style.cuadro} id="country3" name="countryID"  onChange={handleCombo} >
     <option value="select" >Select Country</option>{countryAll && countryAll?.map(country => 
     <option key={country.id} value={country.id}>{country.name}</option>)}
 </select>

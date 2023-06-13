@@ -27,6 +27,7 @@ if(detalle !== undefined){
     subregion:detalle.subregion,
     area:detalle.area,
     population:detalle.population,
+    Activities:detalle.Activities.map(e=>e.name + " "),
 
   }
 }
@@ -41,6 +42,7 @@ if(detalle !== undefined){
   <p className={style.sub}>Subregion: {obj.subregion}</p>
   <p className={style.area}>Area: {obj.area}</p>
   <p className={style.popu}>Population: {obj.population}</p>
+  <p className={style.popu}>Activity: {obj.Activities}</p>
 <div>
   <Link className={style.butt} to="/home"><button className={style.buttVolver}>Volver</button></Link>
 </div>

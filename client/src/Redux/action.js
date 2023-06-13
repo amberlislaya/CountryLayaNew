@@ -29,10 +29,30 @@ export const createActivity = (activity) => {
     try {
       
       const activitiesDiscor = await axios.post("http://localhost:3001/activities", activity);
-      console.log(activitiesDiscor);
       dispatch({ type: CREATE_ACTIVITIES, payload: activitiesDiscor});
+      alert("Actividad creada con exito")
+      document.getElementById("name").value="";
+      document.getElementById("dif").value = 1;
+      document.getElementById("durt").value = 1;
+      document.getElementById("sea").value = "select";
+      document.getElementById("country1").value = "select";
+      document.getElementById("country2").value = "select";
+      document.getElementById("country3").value = "select";
+      document.getElementById("sp").value = "";
+
+
     } catch (error) {
       alert(error.response.data.error)
+      document.getElementById("name").value = "";
+      document.getElementById("dif").value = 1;
+      document.getElementById("durt").value = 1;
+      document.getElementById("sea").value = "select";
+      document.getElementById("country1").value = "select";
+      document.getElementById("country2").value = "select";
+      document.getElementById("country3").value = "select";
+      document.getElementById("sp").value = "";
+
+
 }   
   };
 }
