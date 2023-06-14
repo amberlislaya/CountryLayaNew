@@ -1,8 +1,9 @@
 require("dotenv").config();
-const { Country, Activity } = require("../db");
+const { Country } = require("../db");
 const axios = require("axios");
 
 const infoApi = async () => {
+ 
 const countries = await axios.get("https://rest-countries.up.railway.app/v3.1/all");
 await countries.data.map((country)=> {
     const pais ={

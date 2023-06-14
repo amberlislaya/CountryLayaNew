@@ -2,8 +2,6 @@ const {Op} = require("sequelize");
 const {Country, Activity} = require("../db")
 
 
-
-
 const getCountiesName = async (req, res) => {
  const {name} = req.query;
  try {
