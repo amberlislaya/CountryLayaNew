@@ -55,7 +55,6 @@ switch (action.type) {
 
   case FILTER:
     if (action.payload == "asc") {
-      console.log(action.payload);
       return {
         ...state,
         feel: true,
@@ -67,7 +66,6 @@ switch (action.type) {
       };
     }
     if (action.payload == "desc") {
-      console.log(action.payload);
       return {
         ...state,
         feel: true,
@@ -204,7 +202,7 @@ if(action.payload == "descActivity"){
         ...state,
         fell: true,
         AscActivityPopu: state.filterActivity.sort((a, b) => {
-          return a.population - b.population;
+          return b.population - a.population;
         }),
       };
     }
@@ -214,7 +212,7 @@ if(action.payload == "descActivity"){
         ...state,
         fell: true,
         DescActivityPopu: state.filterActivity.sort((a, b) => {
-          return b.population - a.population;
+          return a.population - b.population;
         }),
       };
     }

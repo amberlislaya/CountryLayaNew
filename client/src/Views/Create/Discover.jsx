@@ -1,4 +1,3 @@
-
 import {React, useEffect, useState} from 'react';
 import {useSelector, useDispatch} from "react-redux"
 import {createActivity, getCountriesAll} from '../../Redux/action'
@@ -84,20 +83,10 @@ setActivity({
 
  const handleSubmit = (event) => {
   event.preventDefault();
-  // if(activity.name && activity.duration && activity.difficulty && activity.season && activity.country){
 dispatch(createActivity(activity))
   setErrors({
     ...errors, name:"",
     })
-  // }else{
-  //   alert("fill in all the data")
-  //   setErrors({
-  //   ...errors, name:"",
-  //   })
-  // }
-
-
-  
  }
 
  const hanlderCl = (event) => {

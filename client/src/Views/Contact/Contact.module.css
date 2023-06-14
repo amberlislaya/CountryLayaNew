@@ -138,7 +138,7 @@ outline: solid 3px #4285f4;
 }
 
 .phone:focus {
-    transform: translateY(-0.5rem);
+    transform: translateY(-1.5rem);
     transform: .5s;
 }
 
